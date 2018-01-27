@@ -1,6 +1,6 @@
 var Hero = require('./hero.js');
 
-var Hero function(name, health favFood, health) {
+var Hero = function(name, favFood, health) {
   this.name = name;
   this.favFood = favFood;
   this.health = health;
