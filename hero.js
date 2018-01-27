@@ -8,4 +8,9 @@ var Hero = function(name, favFood, health) {
 
 }
 
+Hero.prototype.canTalk = function () {
+  return `Hey, my name is ${this.name}, cowabunga dude!`
+
+};
+
 module.exports = Hero;

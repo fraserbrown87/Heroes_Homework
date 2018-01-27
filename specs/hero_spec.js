@@ -25,4 +25,12 @@ describe('Hero', function(){
   it('should have health bar', function(){
     assert.strictEqual(hero3.health, 100);
   })
+
+  it('tasks should start empty', function(){
+    assert.strictEqual(hero4.tasks.length, 0);
+  })
+
+  it('hero can talk', function(){
+    assert.strictEqual(hero2.canTalk(), `Hey, my name is Leonardo, cowabunga dude!`)
+  })
 })
