@@ -1,5 +1,5 @@
-var assert = require('assert');
-var Task = require('../task.js');
+const assert = require('assert');
+const Task = require('../task.js');
 
 describe('Task', function(){
   var task1;

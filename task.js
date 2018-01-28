@@ -1,6 +1,4 @@
-var Task = require('./task.js');
-
-var Task = function(difficultyLevel, urgencyLevel, reward){
+const Task = function(difficultyLevel, urgencyLevel, reward){
   this.difficulty = difficultyLevel;
   this.urgency = urgencyLevel;
   this.reward = reward;
