@@ -1,6 +1,8 @@
 const assert = require('assert');
 const Hero = require('../hero.js');
 const Food = require('../food.js');
+const Task = require('../task.js');
+const Rat = require('../rat.js');
 
 describe('Hero', function(){
   var hero1;
@@ -10,6 +12,9 @@ describe('Hero', function(){
   var food1;
   var food2;
   var food3;
+  var task1;
+  var task2;
+  var rat;
 
   beforeEach(function(){
     hero1 = new Hero("Donatello", "Pizza", 100);
@@ -19,6 +24,9 @@ describe('Hero', function(){
     food1 = new Food("Pizza", 50);
     food2 = new Food("Salad", 10);
     food3 = new Food("Kebab", 100);
+    task1 = new Task("Hardcore", "Maximum", "Full Pizza");
+    task2 = new Task("Easy", "Low", "Nothing");
+    rat = new Rat();
   })
 
   it('should have a name', function(){
@@ -53,5 +61,11 @@ describe('Hero', function(){
   it('when eats favourite food health goes up 1.5', function(){
     hero1.eatFood(food1);
     assert.strictEqual(hero1.health, 150);
+  })
+
+  it('hero can add tasks to list', function(){
+    hero1.addTask(task1);
+    hero1.addTask(task2);
+    assert.strictEqual(hero1.tasks.length, 2);
   })
 })

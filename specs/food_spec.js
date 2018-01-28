@@ -1,6 +1,7 @@
 const assert = require('assert');
 const Food = require('../food.js');
 const Hero = require('../hero.js');
+const Rat = require('../rat.js');
 
 
 describe('Food', function(){
@@ -29,4 +30,14 @@ describe('Food', function(){
   it('should have replenishment Value', function(){
     assert.strictEqual(food2.replenishment, 10);
   })
+
+  it('food starts not poisonous', function() {
+    assert.strictEqual(food1.poisonous, false);
+  })
+
+  it('food can become poisonous', function() {
+  food1.getPoisoned();
+  assert.strictEqual(food1.poisonous, true);
+  })
+
 })

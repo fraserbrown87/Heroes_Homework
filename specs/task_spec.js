@@ -23,4 +23,9 @@ describe('Task', function(){
   it('task should start uncomplete', function(){
     assert.strictEqual(task1.completed, false);
   })
+
+  it('should be able to complete', function(){
+    task1.completeTask()
+    assert.strictEqual(task1.completed, true);
+  })
 })
