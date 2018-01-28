@@ -33,4 +33,8 @@ describe('Hero', function(){
   it('hero can talk', function(){
     assert.strictEqual(hero2.canTalk(), `Hey, my name is Leonardo, cowabunga dude!`)
   })
+
+  it('can eat food', function(){
+
+  })
 })
