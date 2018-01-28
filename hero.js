@@ -18,4 +18,13 @@ Hero.prototype.isFavFood = function (food1) {
   return food1.name === this.favFood ? true : false;
 };
 
+Hero.prototype.methodName = function (food1) {
+  if (food1.name === this.isFavFood) {
+    this.health += (food.replenishment * 1.5)
+  }
+  else this.heal += food.replenishment;
+
+
+};
+
 module.exports = Hero;

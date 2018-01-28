@@ -49,4 +49,9 @@ describe('Hero', function(){
   it('check if favourite food', function(){
     assert.strictEqual(hero2.isFavFood(food1), true);
   })
+
+  it('when eats favourite food health goes up 1.5', function(){
+    hero1.eatFood(food1);
+    assert.strictEqual(hero1.health, 150);
+  })
 })
